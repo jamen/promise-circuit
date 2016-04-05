@@ -1,12 +1,12 @@
 {
-  "name": "promise-circut",
+  "name": "promise-circuit",
   "author": "Jamen Marzonie",
   "version": "0.1.0",
-  "description": "Create a circut-type flow for Promise functions.",
+  "description": "Create a circuit-type flow for Promise functions.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamen/promise-circut"
+    "url": "https://github.com/jamen/promise-circuit"
   },
   "scripts": {
     "test": "gulp; node test",

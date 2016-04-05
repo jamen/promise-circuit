@@ -1,9 +1,9 @@
-# promise-circut
-> Create a circut-type flow for Promise functions.
+# promise-circuit
+> Create a circuit-type flow for Promise functions.
 
 Create a series of Promise-returning functions (with prepared arguments):
 ```javascript
-const foo = new Circut();
+const foo = new Circuit();
 
 for (let item of something) {
   foo.add(myFn, [item, -item]);
@@ -16,30 +16,30 @@ foo.run().then(results => {
 
 ## Installation
 ```shell
-$ npm install --save promise-circut
+$ npm install --save promise-circuit
 ```
 
 ## Usage
 ```javascript
-import Circut from 'promise-circut';
+import Circuit from 'promise-circuit';
 ```
-### `new Circut([series])`
-Create a circut.
+### `new Circuit([series])`
+Create a circuit.
  - `series` (`Array`): Pre-provided series.
 
 Series format:
 ```javascript
-new Circut([[fn, args], [fn, args]]);
+new Circuit([[fn, args], [fn, args]]);
 ```
-#### `Circut#add(fn, [args])`
-Add a promise function to the circut.
+#### `Circuit#add(fn, [args])`
+Add a promise function to the circuit.
  - `fn` (`function`): A promse-returning (or _thenable_) function.
- - `args` (`Array`): Arguments to be passed in once the circut is ran.
+ - `args` (`Array`): Arguments to be passed in once the circuit is ran.
 
-#### `Circut#run()`
-Run the series of promise functions in a circut-like flow.
+#### `Circuit#run()`
+Run the series of promise functions in a circuit-like flow.
 
-Returns `Promise` with all the results of the circut.
+Returns `Promise` with all the results of the circuit.
 
 ## Credits
 | ![jamen][avatar] |

@@ -1,14 +1,14 @@
 'use strict';
 
-function Circut(prefunc) {
+function Circuit(prefunc) {
   this.series = prefunc || [];
 }
 
-Circut.prototype.add = function add(func, params) {
+Circuit.prototype.add = function add(func, params) {
   this.series.push([func, params || []]);
 };
 
-Circut.prototype.run = function run() {
+Circuit.prototype.run = function run() {
   let chain = this.series[0][0](...this.series[0][1]);
   const stack = [];
   for (const item of this.series.slice(1)) {
@@ -20,4 +20,4 @@ Circut.prototype.run = function run() {
   return chain.then(() => stack);
 };
 
-module.exports = Circut;
+module.exports = Circuit;
